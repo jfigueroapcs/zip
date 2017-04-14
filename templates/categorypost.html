@@ -1,0 +1,31 @@
+<!-- Category Post Template -->
+<ion-view view-title="{{categoryPost.category.title}}" hide-back-button="true">
+  <ion-content overflow-scroll="true" class="stable-bg">
+
+	<div class="list card" ng-repeat="item in categoryPost.posts">
+
+		<div ng-click="singlePost(item)">
+		
+        	<img src="{{item.thumbnail}}" class="video-box" ng-if="item.thumbnail"></img>
+
+			<div class="content padding">
+				<h4 class="dark"><strong>{{item.title}}</strong></h4>
+			</div>
+
+			<ion-item>
+			{{trustHtml(item.content)}}  
+        	<div ng-bind-html="trustedHtml"></div>
+    		</ion-item>
+
+		</div>
+		
+		<div class="item tabs tabs-secondary tabs-icon-left">
+			<div class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"> <i class="icon ion-ios-calendar-outline"></i>    	{{item.date | limitTo: 10}} 
+			</div>
+			<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="shareAnywhere('Check This Item', item.title, item.url)"> <i class="icon ion-share"></i> Share </a>
+		</div>
+
+	</div>
+  
+  </ion-content>
+</ion-view>

@@ -1,0 +1,165 @@
+<!-- Form Template -->
+<ion-view view-title="Form Elements">
+   <ion-content>
+      <div class="list padding">
+         <h4>
+            Inline Label
+         </h4>
+         <label class="item item-input">
+         <span class="input-label">Username</span>
+         <input type="text">
+         </label>
+         <label class="item item-input">
+         <span class="input-label">Password</span>
+         <input type="password">
+         </label>
+         <h4 class="border-top">
+            Placeholder label
+         </h4>
+         <label class="item item-input">
+         <input type="text" placeholder="First Name">
+         </label>
+         <label class="item item-input">
+         <input type="text" placeholder="Last Name">
+         </label>
+         <h4 class="border-top">
+            Floating Lable
+         </h4>
+         <label class="item item-input item-floating-label">
+         <span class="input-label">First Name</span>
+         <input type="text" placeholder="First Name">
+         </label>
+         <label class="item item-input item-floating-label">
+         <span class="input-label">Last Name</span>
+         <input type="text" placeholder="Last Name">
+         </label>
+         <h4>
+            Stacked Label
+         </h4>
+         <label class="item item-input item-stacked-label">
+         <span class="input-label">First Name</span>
+         <input type="text" placeholder="John">
+         </label>
+         <label class="item item-input item-stacked-label">
+         <span class="input-label">Email</span>
+         <input type="text" placeholder="john@suhr.com">
+         </label>
+         <h4 class="border-top">Select</h4>
+         <label class="item item-input item-select">
+            <div class="input-label">
+               City
+            </div>
+            <select>
+               <option>NewYork</option>
+               <option selected>Dubai</option>
+               <option>London</option>
+            </select>
+         </label>
+         <h4 class="border-top">Toggle Buttons</h4>
+         <ul class="list">
+            <ion-toggle ng-model="formToggle.php" toggle-class="toggle-assertive">PHP</ion-toggle>
+            <ion-toggle ng-model="formToggle.java" toggle-class="toggle-energised">JAVA</ion-toggle>
+            <ion-toggle ng-model="formToggle.html" toggle-class="toggle-calm">HTML5</ion-toggle>
+            <ion-toggle ng-model="formToggle.sass" toggle-class="toggle-positive">SASS</ion-toggle>
+            <ion-toggle ng-model="formToggle.css" toggle-class="toggle-dark">CSS</ion-toggle>
+         </ul>
+         <h4 class="border-top">Search</h4>
+         <label class="item item-input">
+         <i class="icon ion-search placeholder-icon"></i>
+         <input type="text" placeholder="Search">
+         </label>
+         <h4 class="border-top">Checkbox</h4>
+         <div class="item item-checkbox calm">
+            <label class="checkbox">
+            <input type="checkbox">
+            </label> I read the terms & conditions 
+         </div>
+         <div class="item item-checkbox assertive">
+            <label class="checkbox">
+            <input type="checkbox">
+            </label> Tonight I am going to US 
+         </div>
+         <br />
+         <h4 class="border-top">Radio Buttons</h4>
+         <label class="item item-radio">
+            <input type="radio" name="group">
+            <div class="radio-content">
+               <div class="item-content">
+                  Tap Me
+               </div>
+               <i class="radio-icon ion-checkmark"></i>
+            </div>
+         </label>
+         <label class="item item-radio">
+            <input type="radio" name="group">
+            <div class="radio-content">
+               <div class="item-content">
+                  Tap me too
+               </div>
+               <i class="radio-icon ion-checkmark"></i>
+            </div>
+         </label>
+         <label class="item item-radio">
+            <input type="radio" name="group">
+            <div class="radio-content">
+               <div class="item-content">
+                  Tap Tap Tap
+               </div >
+               <i class="radio-icon ion-checkmark"></i>
+            </div>
+         </label>
+         <h4 class="border-top">Range Slider</h4>
+         <div class="item range range-positive">
+            <i class="icon ion-ios-sunny"></i>
+            <input type="range" name="volume" min="0" max="100" value="33">
+            <i class="icon ion-ios-sunny-outline"></i>
+         </div>
+         <div class="item range range-assertive">
+            <i class="icon ion-ios-volume-low"></i>
+            <input type="range" name="volume" min="0" max="100" value="33">
+            <i class="icon ion-ios-volume-high"></i>
+         </div>
+         <div class="item range range-energized">
+            <i class="icon ion-sad-outline"></i>
+            <input type="range" name="volume" min="0" max="100" value="33">
+            <i class="icon ion-happy-outline"></i>
+         </div>
+         <button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Submit </button>
+         <br />
+         <h4 class="border-top">Buttons:</h4>
+         <button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Button Calm </button>
+         <button class="button button-block button-assertive ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Button Assertive </button>
+         <button class="button button-block button-dark ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Button Dark </button>
+         <button class="button button-block button-energized ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Button Energized </button>
+         <button class="button button-block button-royal ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Button Royal </button>
+         <button class="button button-block button-positive ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Button Royal </button>
+         <button class="button button-block button-balanced ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Button Royal </button>
+         <br />
+         <strong>Different Sizes:</strong><br /><br />
+         <button class="button button-large button-dark">
+         Button Large
+         </button><br /><br />
+         <button class="button button-positive">Button </button><br /><br />
+         <button class="button button-small button-royal"> Small </button><br /><br />
+         <button class="button button-outline button-assertive"> Outlined Button </button><br /><br />
+         <button class="button button-raised button-stable ink-dark">Button Raised</button><br /><br />
+         <button class="button button-clear button-assertive"> Clearly Awesome </button><br /><br />
+         <strong>With Icon:</strong><br /><br />
+         <button class="button icon-left ion-home button-balanced">Icon Left</button><br /><br />
+         <button class="button icon-right ion-star button-energized">Icon Right</button><br /><br />
+         <strong>Button FAB:</strong><br /><br />
+         <button class="button button-fab button-balanced icon ion-leaf"></button>
+         <button class="button button-fab button-assertive icon ion-bug"></button>
+         <button class="button button-fab ink-dark button-calm icon ion-tshirt"></button>
+         <button class="button button-fab button-dark icon ion-heart" data-ink-color="#ff0000" data-ink-opacity=".8"></button><br /><br />
+         <strong>Button List:</strong><br /><br />
+         <div class="list">
+            <div class="item item-button-right">Call<button class="button button-balanced ink"> <i class="icon ion-ios-telephone"></i> </button> </div>
+            <div class="item item-button-right">Share<button class="button button-calm ink"> <i class="icon ion-share"></i> </button> </div>
+            <div class="item item-button-right"> More Info <button class="button button-dark ink"> <i class="icon ion-ios-information-outline"></i> </button> </div>
+            <div class="item item-button-right"> Like <button class="button button-assertive ink"> <i class="icon ion-android-favorite-outline"></i> </button>
+            </div>
+         </div>
+      </div>
+   </ion-content>
+</ion-view>

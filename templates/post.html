@@ -1,0 +1,55 @@
+<!-- Post Template -->
+<ion-view view-title="Post">
+    <button id="fab" class="button button-positive button-fab button-fab-bottom-right" ng-click="shareAnywhere(post.title, null, post.url)">
+        <i class="icon ion-android-share-alt">
+   </i>
+    </button>
+    <ion-content overflow-scroll="true" class="stable-bg">
+        <div class="list card">
+            <img src="{{post.thumbnail}}" class="video-box" ng-if="post.thumbnail"></img>
+            <div class="content padding">
+                <h4 class="dark"><strong>{{post.title}}</strong></h4>
+            </div>
+            <ion-item class="item-text-wrap">
+                {{singleTrustHtml(post.content)}}
+                <div ng-bind-html="singleTrustedHtml"></div>
+            </ion-item>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <div class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"> <i class="icon ion-ios-calendar-outline"></i> {{post.date}} </div>
+                <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"> <i class="icon ion-share" ng-click="shareAnywhere('Check This', post.title, post.url)"></i> Share </a>
+            </div>
+            <div class="item item-divider" ng-if="post.comments.length > 0"> {{post.comments.length}} Comments </div>
+            <div ng-repeat="comment in post.comments" ng-if="post.comments.length > 0">
+                <div class="item item-avatar avatar-style">
+                    <img src="img/arya.jpg">
+                    <div>{{comment.name}}</div>
+                    <div>{{comment.date}}</div>
+                </div>
+                <div class="item item-body add-pading-top" ng-bind-html="comment.content"></div>
+            </div>
+            <div class="item item-body" ng-bind-html="comment.content"></div>
+            <div class="item item-avatar" ng-if="commentData.name">
+                <img src="img/arya.jpg">
+                <div ng-if="commentData.name">{{commentData.name}}</div>
+                <div>{{date | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+            </div>
+            <div class="item item-body" ng-bind-html="commentData.content" ng-if="commentData.content"></div>
+            <div class="item">
+                <h3>Comment</h3>
+            </div>
+            <label class="item item-input">
+                <input type="text" placeholder="First Name" ng-model="commentData.name">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Email" ng-model="commentData.email">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Comments" ng-model="commentData.content">
+            </label>
+            <div class="item">
+                <button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="submitComment(post.id)"> Submit </button>
+            </div>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

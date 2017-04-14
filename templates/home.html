@@ -1,0 +1,14 @@
+<!-- Home Template -->
+<ion-view view-title="Home">
+   <ion-content>
+
+	<div class="wrapper" ng-repeat="item in news.posts">
+		<div ng-click="singlePost(item)" class="inline-style">
+			<img src="{{item.thumbnail}}" class="video-box" ng-if="item.thumbnail"></img>
+			<img src="img/img_placeholder.png" class="video-box" ng-if="!item.thumbnail"></img>
+			<p><strong>{{item.title | limitTo: 80}}</strong></p>
+		</div>
+	</div>
+
+   </ion-content>
+</ion-view>
